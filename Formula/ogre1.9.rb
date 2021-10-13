@@ -80,13 +80,13 @@ class Ogre19 < Formula
 
   patch do
     # fix ARM64 build on 1.9
-    url "https://gist.githubusercontent.com/tlin442/ce4eb42afa236f0c6a9a240b9f7c9b4d/raw/b8f385a4525cd9b8a2647c34da5d2954573877ce/gistfile1.txt"
-    sha256 "7E03D1480E7330F9667CFE3A352101E223EB399AF4470BA95971632DC824CEAE"
+    url "https://gist.githubusercontent.com/tlin442/c917a705c7ac792be12d8049e9115454/raw/3dd4d58688b2f5208cca4d31fa617e3a57965138/gistfile1.txt"
+    sha256 "65A284974317502827875CF354976FB552757ABC81504EC2081A65508CC68584"
   end
 
   def install
     cmake_args = [
-      "-DCMAKE_OSX_ARCHITECTURES='x86_64'",
+      "-DCMAKE_OSX_ARCHITECTURES='arm64'",
       "-DOGRE_BUILD_LIBS_AS_FRAMEWORKS=OFF",
       "-DOGRE_FULL_RPATH:BOOL=FALSE",
       "-DOGRE_BUILD_DOCS:BOOL=FALSE",
