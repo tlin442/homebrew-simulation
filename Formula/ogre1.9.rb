@@ -78,6 +78,12 @@ class Ogre19 < Formula
     sha256 "28d418f7c978bedcf26c7a53c0f621fd5d9a2f27e5b838ea03af00e062f65470"
   end
 
+  patch do
+    # fix ARM64 build on 1.9
+    url "https://gist.githubusercontent.com/tlin442/ce4eb42afa236f0c6a9a240b9f7c9b4d/raw/485200e5bce98e510c1f7065c8c706ceaa840e86/gistfile1.txt"
+    sha256 "58412A799F1DE95699948F65E64BC4EC820F39F523B92DDD403BA9870BC9B3E2"
+  end
+
   def install
     cmake_args = [
       "-DCMAKE_OSX_ARCHITECTURES='x86_64'",
@@ -88,6 +94,7 @@ class Ogre19 < Formula
       "-DOGRE_BUILD_SAMPLES:BOOL=FALSE",
       "-DOGRE_INSTALL_SAMPLES:BOOL=FALSE",
       "-DOGRE_INSTALL_SAMPLES_SOURCE:BOOL=FALSE",
+      "-DOGRE_"
     ]
     cmake_args << "-DOGRE_BUILD_PLUGIN_CG=OFF" if build.without? "cg"
     cmake_args.concat(std_cmake_args)
