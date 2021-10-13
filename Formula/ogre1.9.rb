@@ -80,8 +80,8 @@ class Ogre19 < Formula
 
   patch do
     # fix ARM64 build on 1.9
-    url "https://gist.githubusercontent.com/tlin442/c917a705c7ac792be12d8049e9115454/raw/3dd4d58688b2f5208cca4d31fa617e3a57965138/gistfile1.txt"
-    sha256 "65A284974317502827875CF354976FB552757ABC81504EC2081A65508CC68584"
+    url "https://gist.githubusercontent.com/tlin442/c917a705c7ac792be12d8049e9115454/raw/affc8305ff651d08b007c1b7a05f4e2e09e7d2bc/gistfile1.txt"
+    sha256 "F968692AE49426708C17DF921671746222E2F753F88B55332D813EFBCEB14D72"
   end
 
   def install
